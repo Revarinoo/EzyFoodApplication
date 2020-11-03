@@ -39,11 +39,11 @@ public class SnacksActivity extends AppCompatActivity {
 
     private void getDataSnack(){
 
-        aSnack.add(new Product("Chitato",123,1));
-        aSnack.add(new Product("French Fries",123,1));
-        aSnack.add(new Product("Chitos",123,1));
-        aSnack.add(new Product("Potabee",123,1));
-        aSnack.add(new Product("Taro",123,1));
-        aSnack.add(new Product("Oreo",123,1));
+        aSnack.add(new Product("Chitato",123,1,R.drawable.snack5));
+        aSnack.add(new Product("French Fries",123,1,R.drawable.snack6));
+        aSnack.add(new Product("Chitos",123,1,R.drawable.snack1));
+        aSnack.add(new Product("Lays",123,1,R.drawable.snack2));
+        aSnack.add(new Product("Taro",123,1,R.drawable.snack4));
+        aSnack.add(new Product("Jetz",123,1,R.drawable.snack3));
     }
 }

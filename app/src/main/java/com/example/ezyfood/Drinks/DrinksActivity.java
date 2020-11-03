@@ -42,11 +42,11 @@ public class DrinksActivity extends AppCompatActivity {
 
     public void getData(){
         aDrinks = new ArrayList<>();
-        aDrinks.add(new Product("Air Mineral",123,1));
-        aDrinks.add(new Product("Jus Apel",123,1));
-        aDrinks.add(new Product("Jus Melon",123,1));
-        aDrinks.add(new Product("Jus Jeruk",123,1));
-        aDrinks.add(new Product("Jus Tomat",123,1));
-        aDrinks.add(new Product("Jus Sirsak",123,1));
+        aDrinks.add(new Product("Air Mineral",123,1,R.drawable.air));
+        aDrinks.add(new Product("Jus Apel",123,1,R.drawable.apel));
+        aDrinks.add(new Product("Jus Melon",123,1,R.drawable.melon));
+        aDrinks.add(new Product("Jus Jeruk",123,1,R.drawable.jeruk));
+        aDrinks.add(new Product("Jus Tomat",123,1,R.drawable.juss));
+        aDrinks.add(new Product("Jus Sirsak",123,1,R.drawable.sirsak));
     }
 }

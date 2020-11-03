@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ezyfood.Drinks.DrinksActivity;
@@ -22,6 +23,7 @@ public class OrderActivity extends AppCompatActivity {
     private TextView tvOrderName, tvOrderPrice, tvOrderQty;
     protected ArrayList<Product> drink1 = new ArrayList<Product>();
     private Button btnOrderMore, btnMyOrder;
+    private ImageView imageView;
 
     protected static ArrayList<Product> drinks = new ArrayList<Product>();
 
@@ -34,6 +36,7 @@ public class OrderActivity extends AppCompatActivity {
         tvOrderQty = findViewById(R.id.tvOrderQty);
         btnMyOrder = findViewById(R.id.btnMyOrder);
         btnOrderMore = findViewById(R.id.btnOrderMore);
+        imageView = findViewById(R.id.imagePict);
 
         getSupportActionBar().hide();
 
@@ -43,9 +46,11 @@ public class OrderActivity extends AppCompatActivity {
 
         tvOrderName.setText(drink1.get(0).getName());
         tvOrderPrice.setText("Rp "+ drink1.get(0).getPrice());
-        tvOrderQty.setText("Quantity\n      "+drink1.get(0).getQty());
+        tvOrderQty.setText("Quantity : "+drink1.get(0).getQty());
+        imageView.setImageDrawable(getApplicationContext().getResources().getDrawable(drink1.get(0).getImage()));
 
-        drinks.add(new Product(drink1.get(0).getName(),drink1.get(0).getPrice(),drink1.get(0).getQty()));
+
+        drinks.add(new Product(drink1.get(0).getName(),drink1.get(0).getPrice(),drink1.get(0).getQty(),drink1.get(0).getImage()));
 
         btnOrderMore.setOnClickListener(new View.OnClickListener() {
             @Override

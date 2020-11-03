@@ -134,13 +134,12 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
+                        android:id="@+id/imageDrink"
                         android:layout_alignParentRight="true"
-                        android:layout_width="100dp"
-                        android:layout_marginRight="35dp"
+                        android:layout_width="150dp"
                         android:layout_marginBottom="5dp"
                         android:layout_marginTop="-8dp"
-                        android:layout_height="144dp"
-                        android:src="@drawable/juss" />
+                        android:layout_height="144dp" />
                 </RelativeLayout>
 
             </LinearLayout>

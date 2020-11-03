@@ -135,11 +135,12 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
+                        android:id="@+id/imageFood"
                         android:layout_alignParentRight="true"
-                        android:layout_width="wrap_content"
+                        android:layout_width="150dp"
                         android:layout_marginTop="-8dp"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/food1" />
+                        android:src="@drawable/nasikuning"
+                        android:layout_height="144dp" />
                 </RelativeLayout>
 
             </LinearLayout>

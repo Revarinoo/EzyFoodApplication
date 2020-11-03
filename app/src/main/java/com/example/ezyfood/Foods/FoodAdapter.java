@@ -1,10 +1,12 @@
 package com.example.ezyfood.Foods;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,6 +22,7 @@ import java.util.ArrayList;
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder> {
 
     private ArrayList<Product> listFood;
+    private Context context;
 
     public FoodAdapter(ArrayList<Product> listFood) {
         this.listFood = listFood;
@@ -30,6 +33,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
     public FoodAdapter.FoodViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.item_foods, parent, false);
+        context = parent.getContext();
         return new FoodViewHolder(view);
     }
 
@@ -37,12 +41,14 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
     public void onBindViewHolder(@NonNull final FoodAdapter.FoodViewHolder holder, final int position) {
         holder.tvFoodName.setText(listFood.get(position).getName());
         holder.tvFoodPrice.setText("Rp " + listFood.get(position).getPrice());
+        final Product p = listFood.get(position);
+        holder.imageView.setImageDrawable(context.getResources().getDrawable(listFood.get(position).getImage()));
 
         holder.btnFoodBuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ArrayList<Product> temp = new ArrayList<Product>();
-                temp.add(new Product( holder.tvFoodName.getText().toString(),listFood.get(position).getPrice(),1));
+                temp.add(new Product( holder.tvFoodName.getText().toString(),listFood.get(position).getPrice(),1,p.getImage()));
                 Intent intent = new Intent(v.getContext(), OrderActivity.class);
                 intent.putExtra("drink",new Gson().toJson(temp));
                 v.getContext().startActivity(intent);
@@ -59,12 +65,14 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
 
         private TextView tvFoodName, tvFoodPrice;
         private Button btnFoodBuy;
+        private ImageView imageView;
 
         public FoodViewHolder(View view){
             super(view);
             tvFoodName = view.findViewById(R.id.tvFoodName);
             tvFoodPrice = view.findViewById(R.id.tvFoodPrice);
             btnFoodBuy = view.findViewById(R.id.btnFoodBuy);
+            imageView = view.findViewById(R.id.imageFood);
         }
 
     }

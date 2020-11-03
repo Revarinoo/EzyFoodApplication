@@ -41,11 +41,11 @@ public class FoodsActivity extends AppCompatActivity {
 
     private void getDataFood(){
 
-        aFood.add(new Product("Nasi Padang",123,1));
-        aFood.add(new Product("Ayam Kremes",123,1));
-        aFood.add(new Product("Sushi",123,1));
-        aFood.add(new Product("Ayam Geprek",123,1));
-        aFood.add(new Product("Daging Sapi",123,1));
-        aFood.add(new Product("Nasi Kuning",123,1));
+        aFood.add(new Product("Nasi Padang",123,1,R.drawable.nasipadang));
+        aFood.add(new Product("Ayam Kremes",123,1,R.drawable.ayamkremes));
+        aFood.add(new Product("Sushi",123,1,R.drawable.sushi));
+        aFood.add(new Product("Ayam Geprek",123,1,R.drawable.ayamgeprek));
+        aFood.add(new Product("Steak",123,1,R.drawable.food1));
+        aFood.add(new Product("Nasi Kuning",123,1,R.drawable.nasikuning));
     }
 }
