@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroud_order"
+    tools:context=".OrderActivity">
+
+    <Button
+        android:id="@+id/btnMyOrder"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:background="@drawable/btn_my_order"
+        android:text="My Order"
+        android:textAllCaps="false"
+        android:layout_marginTop="30dp"
+        android:textSize="15sp"
+        android:textColor="#fff"
+        android:layout_marginStart="250dp"></Button>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="140dp"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        android:outlineSpotShadowColor="#000"
+        android:outlineAmbientShadowColor="#000"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvOrderName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Order Menu"
+                        android:textColor="#fdb501"
+                        android:textSize="24dp" />
+
+
+                    <LinearLayout
+                        android:layout_marginTop="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/rate" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/rate"
+                            android:layout_marginLeft="2dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/rate"
+                            android:layout_marginLeft="2dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/rate"
+                            android:layout_marginLeft="2dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/rate"
+                            android:layout_marginLeft="2dp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvOrderPrice"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:textSize="23dp"
+                            android:textColor="#6A90B5"
+                            android:fontFamily="@font/roboto_bold"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 20000" />
+
+
+                        <ImageView
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="wrap_content"
+                            android:src="@drawable/split"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="16dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:textSize="20dp"
+                                android:textColor="#6A90B5"
+                                android:fontFamily="@font/roboto_bold"
+                                android:layout_height="wrap_content"
+                                android:text="1" />
+
+                            <TextView
+                                android:layout_gravity="center"
+                                android:layout_width="wrap_content"
+                                android:textSize="14dp"
+                                android:textColor="#EE6A90B5"
+                                android:fontFamily="@font/roboto_regular"
+                                android:layout_height="wrap_content"
+                                android:text="Porsi" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvOrderQty"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="Quantity"
+                        android:layout_alignParentRight="true"
+                        android:textStyle="bold"
+                        android:textColor="#6A90B5"
+                        android:textSize="23dp"
+                        android:layout_marginTop="35dp">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="6dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/btnOrderMore"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:text="Order More"
+        android:textAllCaps="false"
+        android:layout_marginTop="200dp"
+        android:textColor="#2196F3"
+        android:layout_marginStart="75dp"
+        android:textSize="20sp"
+        android:background="@drawable/btn_order_more"></Button>
+</LinearLayout>
